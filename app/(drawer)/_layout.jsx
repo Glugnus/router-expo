@@ -42,8 +42,9 @@ export default function Layout() {
       })}
     >
       <Drawer.Screen
-        name="index"
+        name="(tabs)"
         options={{
+          headerShown: false,
           title: "Acceuil",
           drawerLabel: "Acceuil",
           drawerIcon: ({ color }) => (

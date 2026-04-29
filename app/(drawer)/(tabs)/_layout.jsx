@@ -5,7 +5,7 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 export default function MainLayout() {
   return (
     <Tabs
-      screenOptions={{
+      screenOptions={({ navigation }) => ({
         tabBarActiveTintColor: colors.PRIMARY,
         tabBarInactiveTintColor: colors.LIGHT,
         tabBarStyle: {
@@ -20,7 +20,16 @@ export default function MainLayout() {
         headerStyle: {
           backgroundColor: colors.DARK,
         },
-      }}
+        headerLeft: () => (
+          <FontAwesome
+            name="align-justify"
+            size={24}
+            color={colors.LIGHT}
+            style={{ marginLeft: 16 }}
+            onPress={() => navigation.getParent().openDrawer()}
+          />
+        ),
+      })}
     >
       <Tabs.Screen
         name="index"
@@ -28,6 +37,15 @@ export default function MainLayout() {
           title: "Acceuil",
           tabBarIcon: ({ color }) => (
             <FontAwesome size={28} name="home" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="articles"
+        options={{
+          title: "Articles",
+          tabBarIcon: ({ color }) => (
+            <FontAwesome size={28} name="book" color={color} />
           ),
         }}
       />
