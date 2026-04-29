@@ -1,5 +1,5 @@
 import { Stack, useRouter } from "expo-router";
-import { colors } from "../../constants/colors";
+import { colors } from "../../../../constants/colors";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { StyleSheet } from "react-native";
 

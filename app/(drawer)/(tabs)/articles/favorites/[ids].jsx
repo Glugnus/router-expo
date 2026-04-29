@@ -1,6 +1,6 @@
 import { Link, useLocalSearchParams, useRouter } from "expo-router";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { colors } from "../../../constants/colors";
+import { colors } from "../../../../../constants/colors";
 import { articleStyles } from "../_layout";
 
 export default function FavoritesPage() {
