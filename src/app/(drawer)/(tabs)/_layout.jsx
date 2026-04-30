@@ -43,18 +43,29 @@ export default function MainLayout() {
       <Tabs.Screen
         name="articles"
         options={{
+          popToTopOnBlur: true,
+          lazy: false,
           title: "Articles",
           tabBarIcon: ({ color }) => (
             <FontAwesome size={28} name="book" color={color} />
           ),
+          tabBarActiveTintColor: colors.DARK,
+          tabBarStyle: {
+            backgroundColor: colors.PRIMARY,
+            height: 80,
+            paddingTop: 12,
+            borderTopLeftRadius: 16,
+            borderTopRightRadius: 16,
+            position: "absolute",
+          },
         }}
       />
       <Tabs.Screen
-        name="setting"
+        name="profile"
         options={{
-          title: "Réglages",
+          title: "profil",
           tabBarIcon: ({ color }) => (
-            <FontAwesome size={28} name="cog" color={color} />
+            <FontAwesome size={28} name="user" color={color} />
           ),
         }}
       />

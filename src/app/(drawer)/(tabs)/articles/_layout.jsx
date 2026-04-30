@@ -24,6 +24,7 @@ export default function RootLayout() {
             onPress={() => router.back()}
           />
         ),
+        headerShown: false,
       }}
     >
       <Stack.Screen

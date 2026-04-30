@@ -1,12 +1,27 @@
-import { Link, useLocalSearchParams, useRouter } from "expo-router";
+import {
+  Link,
+  useLocalSearchParams,
+  useNavigation,
+  useRouter,
+} from "expo-router";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { colors } from "../../../../../constants/colors";
 import { articleStyles } from "../_layout";
+import { useEffect } from "react";
 
 export default function FavoritesPage() {
   const params = useLocalSearchParams();
   const ids = JSON.parse(params.ids);
   const router = useRouter();
+
+  const navigation = useNavigation();
+  useEffect(() => {
+    navigation.getParent().setOptions({
+      title: "Articles Favoris",
+      tabBarLabel: "Articles",
+    });
+  }, [navigation]);
+
   return (
     <View style={[styles.container, articleStyles.borderTopPage]}>
       <Text style={styles.title}>Les articles favoris</Text>

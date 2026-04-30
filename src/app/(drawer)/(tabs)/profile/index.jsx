@@ -1,20 +1,13 @@
 import { Link } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
-import { colors } from "../../constants/colors";
-import Drawer from "expo-router/drawer";
+import { colors } from "../../../../constants/colors";
 
-export default function NotificationsPage() {
+export default function ProfilePage() {
   return (
     <View style={styles.container}>
-      <Drawer.Screen
-        options={{
-          headerTitleStyle: { color: colors.PRIMARY },
-          title: "Notifications Push",
-        }}
-      />
-      <Text style={styles.title}>Vos notifications</Text>
+      <Text style={styles.title}>Bienvenue sur la page du profile</Text>
       <Link style={styles.link} href="/">
-        <Text style={styles.text}>Revenir à l'écran d'acceuil</Text>
+        <Text style={styles.text}>Aller sur l'écran d'acceuil</Text>
       </Link>
     </View>
   );
